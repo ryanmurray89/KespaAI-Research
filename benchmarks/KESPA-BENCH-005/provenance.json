@@ -1,0 +1,226 @@
+{
+  "artifact_id": "KESPA-BENCH-005",
+  "source_material": [
+    {
+      "name": "BENCHMARK_PROTOCOL_V2.01.md",
+      "bytes": 7319,
+      "sha256": "caf1e0864d01e8dc6e272b4ddb0fa32d49c70a6886d6fc85023ee5e9833de2ef",
+      "hash_status": "independently_recomputed_from_supplied_file"
+    },
+    {
+      "name": "BENCHMARK_REPORT.md",
+      "bytes": 1380,
+      "sha256": "6acca506af03d8f912accb76f5f6fb4b353362687b5348227a0b51b80ad90827",
+      "hash_status": "independently_recomputed_from_supplied_file"
+    },
+    {
+      "name": "REVIEW_INSTRUCTIONS.md",
+      "bytes": 1529,
+      "sha256": "bbbcf811483df8a720a81f52e6722158ab6666c05a673506c150780807a46852",
+      "hash_status": "independently_recomputed_from_supplied_file"
+    },
+    {
+      "name": "baseline.json",
+      "bytes": 61190,
+      "sha256": "1b8a597a8dbe01c6e8f4de5c60fb5350ed7f195a992ed901318194562aec5968",
+      "hash_status": "independently_recomputed_from_supplied_file"
+    },
+    {
+      "name": "benchmark_export.json",
+      "bytes": 51539,
+      "sha256": "834425787a083788f83fd1c2be55dd97bbde0c8d548a89c677938cb19b1c2cc6",
+      "hash_status": "independently_recomputed_from_supplied_file"
+    },
+    {
+      "name": "nexledger.json",
+      "bytes": 979,
+      "sha256": "fd0302ff7521ecbdc12dd9276638194e26705bf9624eec6b96c22145a484e8a3",
+      "hash_status": "independently_recomputed_from_supplied_file"
+    },
+    {
+      "name": "suite_manifest.json",
+      "bytes": 8275,
+      "sha256": "20e70ac010205b0167e42e73afef26963e198be9624154c6e58c77ecdb35f9ca",
+      "hash_status": "independently_recomputed_from_supplied_file"
+    },
+    {
+      "name": "REVIEW_BUNDLE_MANIFEST.json",
+      "bytes": 1478,
+      "sha256": "26c0edac60eaada0a456ca449d7b9ed3ba1baaae79ee1d4b6da25b1d34b6ca12",
+      "hash_status": "independently_recomputed_from_supplied_file"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 604,
+      "sha256": "2f51e4e576253c796e4f772977bdff912695887669466f42bd0761d38773f5c2",
+      "hash_status": "independently_recomputed_from_supplied_file"
+    }
+  ],
+  "review_bundle_privacy_flags": {
+    "credentials_included": false,
+    "customer_validation_included": false,
+    "private_artifacts_included": false,
+    "raw_answers_included": false,
+    "raw_prompts_included": false
+  },
+  "directly_recorded_facts": [
+    "Run UUID 1229d2a0-5473-426d-899c-bda596dc5e7a completed with status complete.",
+    "The suite contains 54 cases and is version 2026-09-22.",
+    "The run used condition adaptive and model route local-primary.",
+    "The Brain version/build was 1.1.1-dev / dev-013-trusted-knowledge-index.",
+    "The run recorded 500 knowledge cards.",
+    "All 54 of 54 cases completed and failed_cases was 0.",
+    "Mean deterministic quality was 83.4 on deterministic_0_100 scoring.",
+    "Task success rate was 0.925926.",
+    "Mean judge score, retrieval hit rate, and routing match rate were null/unavailable.",
+    "Mean latency was 2653.463 ms and mean TTFT was 234.574 ms.",
+    "Mean throughput was 66.001 tokens/sec and mean GPU energy was 0.14564943 Wh per case.",
+    "RAG rate was 1 and escalation rate was 0.018519.",
+    "Provider cost attributed was 0 USD.",
+    "The BLD, DS, and BM evidence events are recorded as attested in NexLedger at heights 98, 99, and 100."
+  ],
+  "derived_values": [
+    {
+      "name": "deterministic_task_successes",
+      "value": 50,
+      "formula": "count(results where metrics.deterministic_success == true)"
+    },
+    {
+      "name": "deterministic_task_failures",
+      "value": 4,
+      "formula": "54 - deterministic_task_successes"
+    },
+    {
+      "name": "rag_cases",
+      "value": 54,
+      "formula": "count(results where rag_used == true)"
+    },
+    {
+      "name": "escalated_cases",
+      "value": 1,
+      "formula": "count(results where escalated == true)"
+    },
+    {
+      "name": "web_used_cases",
+      "value": 1,
+      "formula": "count(results where web_used == true)"
+    },
+    {
+      "name": "total_gpu_energy_wh",
+      "value": 7.865069,
+      "formula": "sum(results[].gpu_energy_wh)"
+    },
+    {
+      "name": "total_prompt_tokens",
+      "value": 46266,
+      "formula": "sum(results[].metrics.prompt_tokens)"
+    },
+    {
+      "name": "total_output_tokens",
+      "value": 7113,
+      "formula": "sum(results[].metrics.output_tokens)"
+    },
+    {
+      "name": "total_tokens",
+      "value": 53379,
+      "formula": "sum(results[].metrics.total_tokens)"
+    },
+    {
+      "name": "total_llm_calls",
+      "value": 54,
+      "formula": "sum(results[].metrics.llm_calls)"
+    }
+  ],
+  "negative_results": [
+    {
+      "case_key": "tk-75",
+      "deterministic_quality": 9.2917,
+      "lexical_f1": 0.033333,
+      "required_term_rate": 0.125
+    },
+    {
+      "case_key": "tk-74",
+      "deterministic_quality": 62.2207,
+      "lexical_f1": 0.617021,
+      "required_term_rate": 0.625
+    },
+    {
+      "case_key": "tk-38",
+      "deterministic_quality": 32.627,
+      "lexical_f1": 0.235772,
+      "required_term_rate": 0.375
+    },
+    {
+      "case_key": "tk-72",
+      "deterministic_quality": 41.6971,
+      "lexical_f1": 0.262774,
+      "required_term_rate": 0.5
+    }
+  ],
+  "integrity_commitments": {
+    "run_summary_sha256": "042a5ea58c03ab13cddef2287622d17f88b2f3d241eda2c9b8e6a30b8aae3940",
+    "run_config_sha256": "f570257df712ecbf4740c82ab6bf96c7f3621d2d52f5058a371c7e5e394821fe",
+    "frozen_suite_manifest_sha256": "897908b5da8f32a39ee6e2b8b54f3f2021c303ad12d9427eba8b695f28441309",
+    "exported_suite_manifest_file_sha256": "20e70ac010205b0167e42e73afef26963e198be9624154c6e58c77ecdb35f9ca",
+    "baseline_manifest_sha256": "c94cdc0226582d4b4c3dfc55f625a5877b94bd83812f3e2594b274fef0e82efe",
+    "baseline_file_sha256": "1b8a597a8dbe01c6e8f4de5c60fb5350ed7f195a992ed901318194562aec5968",
+    "benchmark_export_file_sha256": "834425787a083788f83fd1c2be55dd97bbde0c8d548a89c677938cb19b1c2cc6"
+  },
+  "nexledger": {
+    "baseline": {
+      "attested_at": "2026-09-22 13:26:01",
+      "created_at": "2026-09-22 13:25:40",
+      "event_type": "kespa_v201_baseline_frozen",
+      "event_uuid": "29f9ddf8-ee25-46e0-bf4c-7d780be58fa4",
+      "namespace_code": "BLD",
+      "nexledger_ledger_height": 98,
+      "status": "attested",
+      "subject_id": "51740386-7f9c-47d3-958b-5cab95eaece5"
+    },
+    "suite": {
+      "attested_at": "2026-09-22 13:29:01",
+      "created_at": "2026-09-22 13:28:28",
+      "event_type": "benchmark_suite_frozen",
+      "event_uuid": "5360589b-306d-4e2b-b441-788d99a6f5be",
+      "namespace_code": "DS",
+      "nexledger_ledger_height": 99,
+      "status": "attested",
+      "subject_id": "d8d945ae-6879-4c1a-bf67-13895c585859"
+    },
+    "benchmark": {
+      "attested_at": "2026-09-22 13:32:02",
+      "created_at": "2026-09-22 13:31:15",
+      "event_type": "kespa_benchmark_run_complete",
+      "event_uuid": "0ab84032-a5ab-4c4c-863d-95d185460103",
+      "namespace_code": "BM",
+      "nexledger_ledger_height": 100,
+      "status": "attested",
+      "subject_id": "1229d2a0-5473-426d-899c-bda596dc5e7a"
+    }
+  },
+  "validation_boundary": {
+    "verified": [
+      "review-bundle file hashes match the supplied source bytes",
+      "54 benchmark result rows are present",
+      "all 54 rows have complete execution status and no exported error_present flag",
+      "summary metrics and per-case results are available for the recorded run",
+      "baseline, suite, and benchmark events are recorded as attested in supplied NexLedger export"
+    ],
+    "not_established": [
+      "external or human judge score",
+      "retrieval hit rate",
+      "routing match rate",
+      "generalization beyond the frozen suite/configuration/runtime/knowledge snapshot",
+      "direct equivalence to the historical 423-claim V1 A/B/C benchmark condition"
+    ]
+  },
+  "publication_exclusions": [
+    "raw benchmark prompts",
+    "raw model answers",
+    "private artifacts",
+    "credentials and API secrets",
+    "customer data and PII",
+    "raw runtime exceptions",
+    "full baseline internal prompt/configuration contents"
+  ]
+}

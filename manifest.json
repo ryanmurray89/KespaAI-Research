@@ -2,8 +2,8 @@
   "schema": "kespa.public_research_index.v1",
   "project": "KESPA AI",
   "publisher": "NexLabs Studios",
-  "repository": "https://github.com/ryanmurray89/KespaAI",
-  "updated_at": "2026-09-22T12:20:12Z",
+  "repository": "https://github.com/ryanmurray89/KESPA-Research",
+  "updated_at": "2026-09-22T16:34:21Z",
   "entries": [
     {
       "id": "KESPA-EXP-001",
@@ -1620,6 +1620,50 @@
         },
         {
           "name": "metrics.csv",
+          "type": "csv"
+        },
+        {
+          "name": "methodology.md",
+          "type": "markdown"
+        },
+        {
+          "name": "provenance.json",
+          "type": "json"
+        },
+        {
+          "name": "SHA256SUMS.txt",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "KESPA-BENCH-005",
+      "type": "benchmark",
+      "title": "V2.01 Trusted Knowledge Regression Baseline",
+      "date": "2026-09-22",
+      "status": "verified",
+      "summary": "A frozen 54-case Trusted Knowledge engineering regression completed against the KESPA V2.01 adaptive runtime with no execution failures, 83.4 mean deterministic quality, and 92.5926% deterministic task success. RAG was used on all cases and escalation occurred on one case; external judge, retrieval-hit, and routing-match metrics were not available, and the result is explicitly scoped to this frozen suite, configuration, runtime, and 500-card knowledge snapshot.",
+      "path": "benchmarks/KESPA-BENCH-005",
+      "tags": [
+        "benchmark",
+        "regression",
+        "trusted-knowledge",
+        "adaptive-runtime",
+        "deterministic-evaluation",
+        "nexledger"
+      ],
+      "files": [
+        {
+          "name": "README.md",
+          "type": "markdown",
+          "primary": true
+        },
+        {
+          "name": "benchmark.json",
+          "type": "json"
+        },
+        {
+          "name": "results.csv",
           "type": "csv"
         },
         {

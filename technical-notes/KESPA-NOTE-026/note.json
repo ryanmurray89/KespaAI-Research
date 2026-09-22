@@ -1,0 +1,44 @@
+{
+  "id": "KESPA-NOTE-026",
+  "type": "technical_note",
+  "title": "Automated Research Operations and Human-Gated Publication Lifecycle",
+  "date": "2026-09-22",
+  "status": "verified",
+  "summary": "KESPA V2.01 operationalized a formal Research Operations lifecycle that freezes baseline/suite state, persists benchmark results, produces sanitized exports, records cryptographic commitments through NexLedger, runs recurring regression and telemetry jobs, prepares research-review material, and keeps public publication human-gated. Automatic public Git publishing remains disabled by design, and public-release attestation is separated from local benchmark completion.",
+  "research_event_namespaces": [
+    "BLD",
+    "DS",
+    "BM",
+    "MET",
+    "RS"
+  ],
+  "recorded_operational_state": {
+    "research_ops": "operational",
+    "baseline_freeze": "working",
+    "qa_v201": "PASS",
+    "suite_generation": "working",
+    "benchmark_execution": "working",
+    "benchmark_sql_storage": "working",
+    "benchmark_exports": "working",
+    "nexledger_benchmark_attestation": "working",
+    "nexledger_baseline_suite_commitments": "working",
+    "daily_regression": "active",
+    "daily_telemetry_attestation": "active",
+    "review_bundle_creation": "working",
+    "webhook_delivery": "working",
+    "one_time_download": "working",
+    "download_cleanup": "active",
+    "admin_research_ops": "implemented",
+    "automatic_public_git_publishing": "disabled_by_design",
+    "human_reviewed_public_release": "required"
+  },
+  "deduplication_boundary": "The first TK-54 benchmark result is separately represented by KESPA-BENCH-005; this note documents the surrounding research-operations lifecycle and publication-control architecture rather than republishing its performance result.",
+  "tags": [
+    "research-ops",
+    "benchmark-automation",
+    "nexledger",
+    "reproducibility",
+    "publication-workflow",
+    "human-review"
+  ]
+}

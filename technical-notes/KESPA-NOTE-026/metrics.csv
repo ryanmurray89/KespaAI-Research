@@ -1,0 +1,10 @@
+metric,value,unit,status,notes
+research_ops_tables_explicitly_identified,8,tables,derived,Seven research-operations tables plus one secure research-delivery table are explicitly listed in the supplied update.
+research_event_namespaces,5,namespaces,derived,"BLD, DS, BM, MET, and RS are explicitly defined with different evidence meanings."
+recurring_research_jobs_recorded_active,2,jobs,derived,Daily TK-54 regression and daily telemetry attestation are both recorded as active.
+v201_qa_status,PASS,status,recorded,The supplied deployment update records the V2.01 QA preflight as PASS.
+daily_regression_active,1,boolean,recorded,The current-state section records the daily regression cron as ACTIVE.
+daily_telemetry_attestation_active,1,boolean,recorded,The current-state section records daily telemetry attestation as ACTIVE.
+review_bundle_creation_working,1,boolean,recorded,Secure research-review ZIP generation is recorded as WORKING.
+automatic_public_git_publishing_enabled,0,boolean,recorded,Automatic public GitHub publishing is explicitly DISABLED BY DESIGN.
+human_review_publication_required,1,boolean,recorded,Human-reviewed public release workflow is explicitly REQUIRED.

@@ -1,0 +1,100 @@
+{
+  "artifact_id": "KESPA-NOTE-026",
+  "source_material": [
+    {
+      "type": "user_provided_research_ops_update",
+      "date": "2026-09-22",
+      "description": "Detailed KESPA V2.01 Research Ops / automated benchmarking / secure review delivery implementation and operational-state update."
+    },
+    {
+      "type": "existing_public_manifest",
+      "description": "Current KESPA public research manifest after KESPA-BENCH-005, used to preserve all existing entries, allocate KESPA-NOTE-026, and avoid duplicating the benchmark result."
+    },
+    {
+      "type": "previously_supplied_benchmark_review_material",
+      "description": "Previously supplied frozen baseline, suite, benchmark export, report, review manifest, and NexLedger export used only as corroborating context for the operational lifecycle already represented by KESPA-BENCH-005."
+    }
+  ],
+  "directly_recorded_facts": [
+    "KESPA V2.01 Research Ops is recorded as implemented and operational.",
+    "Dedicated persistence exists for research baselines, benchmark suites/cases/runs/results, provider usage, customer validation, and secure research delivery state.",
+    "The V2.01 QA preflight is recorded as PASS.",
+    "Baseline freeze, suite generation, benchmark execution, benchmark SQL storage, and sanitized benchmark exports are recorded as working.",
+    "NexLedger baseline/suite commitments and benchmark attestations are recorded as working.",
+    "The daily trusted-knowledge regression and daily telemetry attestation are recorded as active.",
+    "Secure research-review bundle generation, webhook delivery, one-time download, and private download permissions are recorded as working.",
+    "Research download cleanup is recorded as active.",
+    "Automatic public GitHub publishing is disabled by design.",
+    "Human-reviewed public release is required.",
+    "BLD, DS, BM, MET, and RS have separate research-evidence meanings.",
+    "RS is reserved for a reviewed and actually published research release rather than local benchmark completion.",
+    "Negative and null results are required to remain visible.",
+    "The TK-54 result is a new V2.01 engineering regression and must not be relabeled as the historical A/B/C benchmark."
+  ],
+  "derived_values": [
+    {
+      "name": "research_ops_tables_explicitly_identified",
+      "value": 8,
+      "formula": "7 explicitly listed research-ops tables + 1 research-delivery table"
+    },
+    {
+      "name": "research_event_namespaces",
+      "value": 5,
+      "formula": "count(BLD, DS, BM, MET, RS)"
+    },
+    {
+      "name": "recurring_research_jobs_recorded_active",
+      "value": 2,
+      "formula": "daily regression + daily telemetry attestation"
+    }
+  ],
+  "deduplication": {
+    "excluded_as_duplicate": [
+      "Detailed TK-54 performance result already published as KESPA-BENCH-005"
+    ],
+    "excluded_as_routine_product_work": [
+      "Admin readability and layout styling changes"
+    ],
+    "future_not_completed": [
+      "AR-30 private artifact recall",
+      "MM-24 multimodal evidence",
+      "AC-40 adaptive compute",
+      "KAI-54 formal knowledge amplification",
+      "MT-54 model transfer"
+    ]
+  },
+  "validation_boundary": {
+    "recorded_operational": [
+      "formal Research Ops subsystem",
+      "baseline freeze",
+      "V2.01 QA",
+      "suite generation",
+      "benchmark execution",
+      "SQL persistence",
+      "sanitized exports",
+      "NexLedger research commitments",
+      "daily regression automation",
+      "daily telemetry attestation",
+      "review-bundle generation",
+      "human-gated public publication workflow"
+    ],
+    "not_claimed": [
+      "scientific generalization beyond any frozen benchmark suite",
+      "external-judge scores when judge is disabled",
+      "retrieval-hit/routing-match metrics not defined by the initial suite",
+      "automatic determination of scientific significance",
+      "fully autonomous public publication"
+    ]
+  },
+  "publication_exclusions": [
+    "private prompts and answers",
+    "customer/user identifiers or content",
+    "private artifact content",
+    "credentials and secrets",
+    "webhook secrets",
+    "download token values",
+    "session/authentication material",
+    "private application source code",
+    "deployment-specific secure download endpoint and ACL command details"
+  ]
+}

@@ -3,7 +3,7 @@
   "project": "KESPA AI",
   "publisher": "NexLabs Studios",
   "repository": "https://github.com/ryanmurray89/KESPA-Research",
-  "updated_at": "2026-09-22T16:34:21Z",
+  "updated_at": "2026-09-22T16:42:24Z",
   "entries": [
     {
       "id": "KESPA-EXP-001",
@@ -1664,6 +1664,50 @@
         },
         {
           "name": "results.csv",
+          "type": "csv"
+        },
+        {
+          "name": "methodology.md",
+          "type": "markdown"
+        },
+        {
+          "name": "provenance.json",
+          "type": "json"
+        },
+        {
+          "name": "SHA256SUMS.txt",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "KESPA-NOTE-026",
+      "type": "technical_note",
+      "title": "Automated Research Operations and Human-Gated Publication Lifecycle",
+      "date": "2026-09-22",
+      "status": "verified",
+      "summary": "KESPA V2.01 operationalized a formal Research Operations lifecycle that freezes baseline/suite state, persists benchmark results, produces sanitized exports, records cryptographic commitments through NexLedger, runs recurring regression and telemetry jobs, prepares research-review material, and keeps public publication human-gated. Automatic public Git publishing remains disabled by design, and public-release attestation is separated from local benchmark completion.",
+      "path": "technical-notes/KESPA-NOTE-026",
+      "tags": [
+        "research-ops",
+        "benchmark-automation",
+        "nexledger",
+        "reproducibility",
+        "publication-workflow",
+        "human-review"
+      ],
+      "files": [
+        {
+          "name": "README.md",
+          "type": "markdown",
+          "primary": true
+        },
+        {
+          "name": "note.json",
+          "type": "json"
+        },
+        {
+          "name": "metrics.csv",
           "type": "csv"
         },
         {

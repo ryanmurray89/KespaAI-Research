@@ -1,0 +1,45 @@
+{
+  "id": "KESPA-NOTE-025",
+  "type": "technical_note",
+  "title": "Private Encrypted Artifact Storage and Scoped Retrieval Foundation",
+  "date": "2026-09-22",
+  "status": "verified",
+  "summary": "KESPA implemented a private upload and artifact foundation with encrypted originals outside the public web root, chat/project/account scoping, owner-scoped metadata and indexing structures, and runtime-storage exclusion from Git. A live artifact was successfully stored as an encrypted .kespa blob with 600 permissions after two production upload failures were diagnosed and corrected; semantic cross-chat retrieval and enrichment remain outside the verified boundary of this checkpoint.",
+  "scope_classes": [
+    "chat",
+    "project",
+    "account"
+  ],
+  "explicit_core_tables": [
+    "user_artifacts",
+    "user_artifact_chunks",
+    "user_artifact_terms",
+    "message_artifacts"
+  ],
+  "verified_at_checkpoint": {
+    "private_artifact_architecture_implemented": true,
+    "encrypted_storage_outside_public_web_root": true,
+    "live_artifact_physically_stored": true,
+    "stored_blob_permission_mode": "600",
+    "runtime_storage_removed_from_git_tracking": true,
+    "upload_failures_resolved": 2
+  },
+  "not_yet_claimed_verified": [
+    "semantic_cross_chat_artifact_retrieval",
+    "embedding_based_artifact_retrieval",
+    "multimodal_vision_enrichment",
+    "artifact_enrichment_cron_end_to_end",
+    "all_supported_format_extractors",
+    "artifact_deduplication_and_versioning",
+    "cold_or_object_storage",
+    "backup_restore_and_retention_lifecycle"
+  ],
+  "tags": [
+    "private-artifacts",
+    "encrypted-storage",
+    "scope-aware-retrieval",
+    "privacy",
+    "uploads",
+    "provenance"
+  ]
+}

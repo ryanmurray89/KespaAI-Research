@@ -1,0 +1,85 @@
+{
+  "artifact_id": "KESPA-NOTE-025",
+  "source_material": [
+    {
+      "type": "user_provided_project_update",
+      "description": "KESPA Jira/project update dated 2026-09-22 covering private artifact architecture, live upload debugging, storage hygiene, plan guardrails, security boundaries, and open QA items."
+    },
+    {
+      "type": "user_provided_readme_addendum",
+      "description": "KESPA current-state README addendum dated 2026-09-22 covering artifact scope, storage model, retrieval design, processing options, and operational status."
+    },
+    {
+      "type": "user_provided_future_plan",
+      "description": "KESPA future-plan document dated 2026-09-22 used only to identify explicitly future artifact-intelligence work and avoid presenting planned features as completed results."
+    },
+    {
+      "type": "existing_public_manifest",
+      "description": "Current KESPA public research manifest with schema kespa.public_research_index.v1, 37 existing entries, and KESPA-NOTE-024 as the latest technical-note ID before this package."
+    }
+  ],
+  "directly_recorded_facts": [
+    "KESPA has a private artifact architecture for uploaded files and images.",
+    "Artifacts can be scoped to chat, project, or account.",
+    "The private artifact storage root is outside the public web root.",
+    "Original artifact blobs are encrypted at rest.",
+    "A live artifact was successfully stored after the recorded upload fixes.",
+    "The successfully stored artifact was recorded as owned by the PHP service account and permissioned 600.",
+    "The implementation explicitly names user_artifacts, user_artifact_chunks, user_artifact_terms, and message_artifacts.",
+    "PHP-FPM private-storage write access was one recorded upload failure and was corrected.",
+    "Numeric search-term type conversion was a second recorded upload failure and was corrected by casting terms to string before hashing.",
+    "Runtime storage is ignored by Git and the recorded git ls-files storage check returned no tracked storage content.",
+    "Semantic cross-chat artifact recall and the artifact-enrichment cron remain items requiring deliberate production verification."
+  ],
+  "derived_values": [
+    {
+      "name": "artifact_scope_classes",
+      "value": 3,
+      "formula": "count(chat, project, account)"
+    },
+    {
+      "name": "explicit_core_artifact_tables",
+      "value": 4,
+      "formula": "count(user_artifacts, user_artifact_chunks, user_artifact_terms, message_artifacts)"
+    },
+    {
+      "name": "upload_failures_resolved",
+      "value": 2,
+      "formula": "count(the two independently enumerated live upload failures)"
+    }
+  ],
+  "interpretations": [
+    "The artifact system establishes a distinct private-evidence boundary rather than treating uploaded files as ordinary global memory.",
+    "The current evidence supports verification of encrypted storage and scope foundations but not a verified claim of semantic cross-chat retrieval quality or multimodal enrichment."
+  ],
+  "validation_boundary": {
+    "recorded_complete_or_live_verified": [
+      "private artifact architecture",
+      "chat/project/account scope model",
+      "encrypted non-public artifact storage",
+      "successful live artifact persistence after fixes",
+      "permission mode 600 on the recorded stored artifact",
+      "core metadata/index tables",
+      "runtime storage exclusion from Git"
+    ],
+    "not_yet_verified_end_to_end": [
+      "semantic cross-chat artifact recall",
+      "embedding-based retrieval quality",
+      "vision/multimodal enrichment",
+      "artifact enrichment worker under production cron",
+      "all Office/PDF/image extraction paths",
+      "artifact deduplication/versioning",
+      "object/cold-storage lifecycle",
+      "backup/restore/retention lifecycle"
+    ]
+  },
+  "publication_exclusions": [
+    "test user identifier",
+    "artifact UUID and user-specific stored path",
+    "uploaded artifact contents",
+    "encryption keys and secrets",
+    "provider credentials",
+    "private application source code",
+    "private user information"
+  ]
+}

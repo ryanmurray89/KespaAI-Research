@@ -2,8 +2,8 @@
   "schema": "kespa.public_research_index.v1",
   "project": "KESPA AI",
   "publisher": "NexLabs Studios",
-  "repository": "https://github.com/ryanmurray89/KespaAI-Research",
-  "updated_at": "2026-09-16T02:17:00Z",
+  "repository": "https://github.com/ryanmurray89/KESPA-Research",
+  "updated_at": "2026-09-22T12:20:12Z",
   "entries": [
     {
       "id": "KESPA-EXP-001",
@@ -1563,6 +1563,50 @@
         "supersession",
         "knowledge-lifecycle",
         "rag"
+      ],
+      "files": [
+        {
+          "name": "README.md",
+          "type": "markdown",
+          "primary": true
+        },
+        {
+          "name": "note.json",
+          "type": "json"
+        },
+        {
+          "name": "metrics.csv",
+          "type": "csv"
+        },
+        {
+          "name": "methodology.md",
+          "type": "markdown"
+        },
+        {
+          "name": "provenance.json",
+          "type": "json"
+        },
+        {
+          "name": "SHA256SUMS.txt",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "KESPA-NOTE-025",
+      "type": "technical_note",
+      "title": "Private Encrypted Artifact Storage and Scoped Retrieval Foundation",
+      "date": "2026-09-22",
+      "status": "verified",
+      "summary": "KESPA implemented a private upload and artifact foundation with encrypted originals outside the public web root, chat/project/account scoping, owner-scoped metadata and indexing structures, and runtime-storage exclusion from Git. A live artifact was successfully stored as an encrypted .kespa blob with 600 permissions after two production upload failures were diagnosed and corrected; semantic cross-chat retrieval and enrichment remain outside the verified boundary of this checkpoint.",
+      "path": "technical-notes/KESPA-NOTE-025",
+      "tags": [
+        "private-artifacts",
+        "encrypted-storage",
+        "scope-aware-retrieval",
+        "privacy",
+        "uploads",
+        "provenance"
       ],
       "files": [
         {

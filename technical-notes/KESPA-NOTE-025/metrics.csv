@@ -1,0 +1,9 @@
+metric,value,unit,status,notes
+artifact_scope_classes,3,classes,derived,"Counted from the explicitly defined chat, project, and account artifact scopes."
+explicit_core_artifact_tables,4,tables,derived,"Counted from user_artifacts, user_artifact_chunks, user_artifact_terms, and message_artifacts explicitly named in the source."
+live_encrypted_artifact_store_verified,1,boolean,recorded,"The project update records a final successful live artifact store after the upload hotfixes."
+upload_failures_resolved,2,failures,derived,"Two independent production upload failures are explicitly enumerated in the source."
+stored_blob_permission_mode,600,unix_mode,recorded,"The successfully stored artifact was recorded with permission mode 600."
+tracked_storage_content_after_cleanup,0,files,recorded,"The recorded git ls-files storage check returned no tracked storage content."
+semantic_cross_chat_retrieval_verified,0,boolean,boundary,"The supplied update lists semantic cross-chat artifact recall as still requiring deliberate production QA."
+artifact_enrichment_cron_verified,0,boolean,boundary,"Implementation exists, but the supplied update states the production cron still requires verification."

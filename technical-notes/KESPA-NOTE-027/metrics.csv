@@ -1,0 +1,9 @@
+metric,value,unit,status,notes
+response_dimensions_recorded,17,dimensions,derived,Count of the explicitly listed Conversation Engine response-profile dimensions in the supplied implementation record.
+posture_classes_recorded,11,postures,derived,Count of the explicitly listed posture classes.
+primary_conversation_config_rows_recorded,8,rows,derived,Count of the explicitly listed primary conversation_* brain_config rows.
+live_interaction_examples_recorded,4,examples,derived,"The supplied update shows four live interaction examples spanning casual, celebratory, and supportive contexts."
+brain_build,dev-019-personality-contract-v2,identifier,recorded,Current Brain build recorded by the supplied implementation update.
+local_model,qwen2.5-coder:7b-instruct-q4_K_M,identifier,recorded,Current local model recorded by the supplied update.
+implementation_status,"implemented baseline, tuning phase",status,recorded,Status stated at the top of the supplied Jira ticket.
+formal_conversation_regression_completed,0,boolean,recorded_boundary,A deterministic conversation regression suite is listed as future work rather than a completed benchmark.

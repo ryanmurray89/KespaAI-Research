@@ -1,0 +1,27 @@
+{
+  "id": "KESPA-NOTE-027",
+  "type": "technical_note",
+  "title": "Conversation Engine and SQL-Driven Personality Contract",
+  "date": "2026-09-23",
+  "status": "verified",
+  "summary": "KESPA moved normal personality selection and tuning out of phrase-specific Brain patches into an application-side Conversation Engine backed by brain_config. The engine derives per-turn conversational posture and personality dimensions from current context, recent tone, durable communication preferences, and SQL policy, then sends a machine-readable behavior contract to Brain for generic style validation and repair. Live testing demonstrated differentiated casual, celebratory, and supportive behavior; tuning remains ongoing and no formal conversation-regression benchmark is claimed at this checkpoint.",
+  "brain_build": "dev-019-personality-contract-v2",
+  "local_model": "qwen2.5-coder:7b-instruct-q4_K_M",
+  "response_dimensions_recorded": 17,
+  "posture_classes_recorded": 11,
+  "primary_configuration_rows_recorded": 8,
+  "architecture_boundary": {
+    "conversation_engine": "selects posture, dimensions, and behavioral policy from context/preferences/configuration",
+    "brain": "generates, validates style compliance, and performs generic style-only repair when needed"
+  },
+  "current_status": "implemented_baseline_tuning_phase",
+  "formal_conversation_regression_completed": false,
+  "tags": [
+    "conversation-engine",
+    "personality-contract",
+    "sql-configuration",
+    "adaptive-dialogue",
+    "style-enforcement",
+    "user-preferences"
+  ]
+}

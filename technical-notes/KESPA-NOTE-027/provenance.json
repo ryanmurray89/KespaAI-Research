@@ -1,0 +1,84 @@
+{
+  "artifact_id": "KESPA-NOTE-027",
+  "source_material": [
+    {
+      "type": "user_provided_jira_update",
+      "date": "2026-09-23",
+      "title": "KESPA Conversation Engine + SQL-Driven Personality Contract",
+      "status": "Implemented baseline, tuning phase"
+    },
+    {
+      "type": "existing_public_manifest",
+      "description": "Current generated KESPA public research manifest through KESPA-NOTE-026, used for deduplication and sequential ID allocation."
+    }
+  ],
+  "directly_recorded_facts": [
+    "KESPA implemented a Conversation Engine plus SQL-driven Personality Contract baseline.",
+    "The stated goal is to keep normal personality tuning out of phrase-specific Brain patches.",
+    "The Conversation Engine evaluates the current turn using current message/context, recent tone, durable communication preferences, and global SQL-backed rules.",
+    "The engine records named personality dimensions and selects among named conversational postures.",
+    "Current serious situational context has higher precedence than ordinary persistent communication preferences.",
+    "The engine can use durable communication-preference memories while avoiding persistent transient emotional-state profiling.",
+    "brain_config is the runtime behavior/configuration control plane for the Conversation Engine.",
+    "A machine-readable personality contract is compiled for the current response.",
+    "Brain receives the contract, generates a response, validates style compliance, and can perform style-only repair.",
+    "The current Brain build is dev-019-personality-contract-v2.",
+    "The current local model is qwen2.5-coder:7b-instruct-q4_K_M.",
+    "Live tests in the supplied update show casual, celebratory, and supportive response behavior.",
+    "At least one supportive response still requires wording polish.",
+    "Normal personality tuning is intended to occur through SQL/Admin configuration rather than repeated Brain changes.",
+    "A deterministic conversation regression suite and personality-quality metrics are future work."
+  ],
+  "derived_values": [
+    {
+      "name": "response_dimensions_recorded",
+      "value": 17,
+      "formula": "count(explicitly listed response-profile dimensions)"
+    },
+    {
+      "name": "posture_classes_recorded",
+      "value": 11,
+      "formula": "count(explicitly listed posture names)"
+    },
+    {
+      "name": "primary_conversation_config_rows_recorded",
+      "value": 8,
+      "formula": "count(explicitly listed primary conversation_* configuration rows)"
+    },
+    {
+      "name": "live_interaction_examples_recorded",
+      "value": 4,
+      "formula": "count(live interaction examples shown in Current Verified Behavior)"
+    }
+  ],
+  "validation_boundary": {
+    "verified": [
+      "implemented Conversation Engine baseline",
+      "SQL-backed personality/configuration architecture",
+      "machine-readable personality contract",
+      "generic Brain-side contract validation/style repair path",
+      "context-over-preference precedence design",
+      "recorded live interaction examples"
+    ],
+    "not_claimed": [
+      "formal posture accuracy",
+      "formal contract violation rate",
+      "formal style-repair success rate",
+      "user-rated naturalness improvement",
+      "general superiority over other conversational models",
+      "completion of the planned deterministic conversation regression suite"
+    ]
+  },
+  "publication_exclusions": [
+    "raw private conversations",
+    "user/account identifiers",
+    "private memory contents",
+    "absolute internal filesystem paths",
+    "private source code",
+    "raw SQL dumps",
+    "credentials and secrets",
+    "tokens/cookies/session material"
+  ],
+  "repository_identity": "https://github.com/ryanmurray89/KespaAI-Research",
+  "repository_identity_rule": "The public-research manifest repository field is preserved exactly as the canonical KespaAI-Research repository URL."
+}

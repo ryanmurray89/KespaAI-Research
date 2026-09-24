@@ -1,0 +1,48 @@
+{
+  "schema": "kespa.public_research_provenance.v1",
+  "release_id": "KESPA-NOTE-029",
+  "source_material": [
+    {
+      "kind": "engineering_update",
+      "description": "KESPA V2.3 lock-in / autonomous-learning engineering and Jira update supplied by the project owner on 2026-09-24."
+    }
+  ],
+  "directly_recorded_facts": [
+    "The autonomous-learning subsystem can initiate research work without an active user.",
+    "The curriculum contained 24 enabled research domains at the recorded checkpoint.",
+    "A daily operating-system timer was installed and enabled, with a default cycle described as approximately 02:00.",
+    "Background lifecycle workers were scheduled on an approximately five-minute cadence.",
+    "The first zero-user daily-learning run completed and queued four public research requests.",
+    "A maximum verification-age ceiling of 30 days was active as an additional safeguard.",
+    "Benchmark gaps may feed research targets without exporting benchmark prompt/gold content into the research pipeline.",
+    "Automatic public research publication was hard-disabled.",
+    "Blind Trusted Knowledge promotion was hard-disabled.",
+    "The lock-in readiness audit reported zero failures, one warning, and PASS WITH WARNINGS.",
+    "The remaining audit warning was that external S3-compatible artifact storage was not configured while local encrypted storage remained active."
+  ],
+  "derived_values": [],
+  "validation_boundary": [
+    "The source states that the first production run demonstrates scheduler, persistence, and queue initiation, but does not prove every research request completes every downstream lifecycle stage.",
+    "The source does not provide a verified knowledge-card promotion count for the first run.",
+    "The source does not provide a research completion rate, verification pass rate, conflict rate, or provider-cost total for the first run.",
+    "Bulk curriculum import, the dedicated Learning Operations dashboard, large-scale expansion, and general chat-derived learning sanitization remain future work.",
+    "Some pause and audit controls are expressed as operational requirements/expectations rather than all being explicitly verified as deployed UI features."
+  ],
+  "deduplication": {
+    "related_prior_records": [
+      "KESPA-NOTE-003",
+      "KESPA-NOTE-010",
+      "KESPA-NOTE-024"
+    ],
+    "distinct_scope": "This release records zero-user curriculum-driven research initiation, recurring OS scheduling, benchmark-gap feeding, and evidence-gated safety boundaries rather than republishing the earlier user-triggered natural research-gap or Trusted Knowledge lifecycle work."
+  },
+  "publication_exclusions": [
+    "private prompts and answers",
+    "private user or organization data",
+    "credentials, API keys, tokens, cookies, or sessions",
+    "raw internal logs and error bodies",
+    "unnecessary private filesystem/storage paths",
+    "unsupported claims that queued research became Trusted Knowledge",
+    "unsupported claims of large-scale autonomous-learning performance"
+  ]
+}

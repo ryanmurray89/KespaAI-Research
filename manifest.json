@@ -3,7 +3,7 @@
   "project": "KESPA AI",
   "publisher": "NexLabs Studios",
   "repository": "https://github.com/ryanmurray89/KespaAI-Research",
-  "updated_at": "2026-09-24T00:47:08Z",
+  "updated_at": "2026-09-24T11:41:44Z",
   "entries": [
     {
       "id": "KESPA-EXP-001",
@@ -1783,6 +1783,51 @@
         "artifact-retention",
         "encrypted-storage",
         "provider-routing"
+      ],
+      "files": [
+        {
+          "name": "README.md",
+          "type": "markdown",
+          "primary": true
+        },
+        {
+          "name": "note.json",
+          "type": "json"
+        },
+        {
+          "name": "metrics.csv",
+          "type": "csv"
+        },
+        {
+          "name": "methodology.md",
+          "type": "markdown"
+        },
+        {
+          "name": "provenance.json",
+          "type": "json"
+        },
+        {
+          "name": "SHA256SUMS.txt",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "KESPA-NOTE-029",
+      "type": "technical_note",
+      "title": "Zero-User Curriculum Learning and Evidence-Gated Autonomous Research",
+      "date": "2026-09-24",
+      "status": "verified",
+      "summary": "KESPA operationalized a scheduled zero-user learning driver that selects research opportunities from an explicit curriculum and other gap signals, queues asynchronous research work, and keeps Trusted Knowledge promotion and public publication independently fail-closed. The first recorded production daily-learning run completed and queued four public research requests; 24 curriculum domains were enabled, a 30-day maximum verification-age safeguard was active, background lifecycle workers were scheduled, and the production readiness audit reported zero failures with one non-blocking storage warning. Full downstream completion of every queued research request and large-scale autonomous promotion remain outside this verified checkpoint.",
+      "path": "technical-notes/KESPA-NOTE-029",
+      "tags": [
+        "autonomous-learning",
+        "zero-user-learning",
+        "curriculum",
+        "evidence-gating",
+        "scheduled-research",
+        "knowledge-lifecycle",
+        "auditability"
       ],
       "files": [
         {

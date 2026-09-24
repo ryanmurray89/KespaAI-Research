@@ -1,0 +1,76 @@
+{
+  "artifact_id": "KESPA-NOTE-028",
+  "source_material": [
+    {
+      "type": "user_provided_project_update",
+      "title": "KESPA Image Generation V1 — Local ComfyUI/RTX 3070 Integration, Image Bridge, Plan Retention & Scalable Artifact Storage",
+      "status": "Implemented / Operational — Phase 2 Quality & Scaling Pending"
+    },
+    {
+      "type": "existing_public_manifest",
+      "description": "Current generated KESPA public research manifest through KESPA-NOTE-027, used for deduplication and sequential ID allocation."
+    }
+  ],
+  "directly_recorded_facts": [
+    "KESPA can detect image-generation requests in normal chat and route them through the existing provider architecture.",
+    "A dedicated authenticated OpenAI-compatible Image Bridge mediates between KESPA and local ComfyUI.",
+    "Raw ComfyUI is intentionally localhost-only and not directly exposed to the Internet.",
+    "The current local image worker uses an NVIDIA GeForce RTX 3070 with 8 GB VRAM and shares the system with other KESPA local AI workloads.",
+    "The known-good initial checkpoint uses SDXL Base 1.0 at 1024x1024, 25 steps, CFG 7, dpmpp_2m, karras, batch 1.",
+    "Direct ComfyUI generation, local bridge generation, public bridge generation, and real KESPA chat generation were recorded as successful.",
+    "A local bridge example was recorded at approximately 13.7 seconds and a public bridge example at approximately 16.6 seconds.",
+    "The real KESPA chat test detected the image request, selected image_generation, routed to the local provider, generated on the RTX 3070, stored the artifact, and rendered the image in chat with PASS status.",
+    "Temporary raw worker outputs are cleaned after approximately 60 minutes and cleanup runs every 15 minutes.",
+    "Generated images retained by the WWW application are stored through the encrypted private artifact lifecycle.",
+    "Initial plan retention values are Free 1 hour, Plus 12 hours, Pro 24 hours, Enterprise 168 hours.",
+    "The generated-image cleanup worker runs every 10 minutes and uses the normal artifact deletion lifecycle rather than blind filesystem deletion.",
+    "The artifact storage framework supports per-user override, plan provider, then local encrypted fallback resolution.",
+    "S3-compatible external storage support is implemented but not configured against a production provider at this checkpoint.",
+    "External image-generation fallback and higher-quality image models are not configured at this checkpoint.",
+    "Deployment QA recorded failures=0 and warnings=1, where the warning was no external providers configured.",
+    "The initial retention dry run recorded expired=0, deleted=0, failed=0.",
+    "No brain_api.py modification was required."
+  ],
+  "derived_values": [],
+  "validation_boundary": {
+    "verified": [
+      "local image generation on the recorded RTX 3070 worker",
+      "dedicated authenticated image bridge",
+      "public bridge path",
+      "provider-routed real-chat image generation",
+      "generated-image encrypted artifact retention",
+      "plan-specific retention configuration",
+      "worker and WWW cleanup configuration",
+      "storage-provider routing framework implementation"
+    ],
+    "not_claimed": [
+      "production-final image quality",
+      "formal image-generation benchmark completion",
+      "latency distribution or service-level objective",
+      "production S3/R2 integration",
+      "external image-generation fallback operation",
+      "asynchronous job queue operation",
+      "multi-GPU scheduling",
+      "production-scale concurrency",
+      "superiority over external image models or providers"
+    ]
+  },
+  "metric_interpretation": {
+    "latency_examples": "The approximately 13.7 s and 16.6 s values are individual observed examples preserved from the source, not benchmark averages or percentiles.",
+    "qa_warning": "The single recorded warning reflects the intentional absence of configured external storage providers and is not represented as a failure.",
+    "retention_dry_run": "The zero counts reflect installation-time dry-run state and do not establish long-term deletion behavior."
+  },
+  "publication_exclusions": [
+    "credential values",
+    "bearer tokens",
+    "private configuration contents",
+    "Cloudflare tunnel identifiers",
+    "absolute private filesystem paths",
+    "private user prompts or generated-image contents",
+    "private user/account identifiers",
+    "raw private logs",
+    "private source code"
+  ],
+  "repository_identity": "https://github.com/ryanmurray89/KespaAI-Research",
+  "repository_identity_rule": "The public-research manifest repository field is preserved exactly as the canonical KespaAI-Research repository URL."
+}

@@ -1,0 +1,26 @@
+metric,value,unit,status,notes
+image_worker_gpu,NVIDIA GeForce RTX 3070,identifier,recorded,Current local image-generation GPU.
+image_worker_vram,8,GB,recorded,Recorded VRAM capacity of the current image worker.
+current_checkpoint,sd_xl_base_1.0.safetensors,identifier,recorded,Known-good functional baseline; not claimed as final quality model.
+default_resolution,1024x1024,pixels,recorded,Recorded current generation default.
+default_steps,25,steps,recorded,Recorded current generation default.
+default_cfg,7,cfg,recorded,Recorded current generation default.
+local_bridge_latency_example,13.7,seconds,recorded_example,"Single observed example, not a benchmark mean or service-level guarantee."
+public_bridge_latency_example,16.6,seconds,recorded_example,"Single observed example through the public bridge, not a benchmark mean or service-level guarantee."
+end_to_end_chat_generation_pass,1,boolean,recorded,"Normal KESPA chat request completed generation, storage, and rendering."
+worker_raw_output_retention,60,minutes,recorded,Approximate age threshold for temporary raw ComfyUI output cleanup.
+worker_cleanup_interval,15,minutes,recorded,Recorded worker cleanup cadence.
+www_cleanup_interval,10,minutes,recorded,Recorded generated-image artifact cleanup cadence.
+free_generated_image_retention,1,hours,recorded,Initial plan policy.
+plus_generated_image_retention,12,hours,recorded,Initial plan policy.
+pro_generated_image_retention,24,hours,recorded,Initial plan policy.
+enterprise_generated_image_retention,168,hours,recorded,Initial plan policy (7 days).
+storage_qa_failures,0,count,recorded,Recorded migration/storage QA result.
+storage_qa_warnings,1,count,recorded,"Warning was absence of external storage providers, expected for current local-storage deployment."
+retention_dry_run_expired,0,artifacts,recorded,Installation-time dry run.
+retention_dry_run_deleted,0,artifacts,recorded,Installation-time dry run.
+retention_dry_run_failed,0,artifacts,recorded,Installation-time dry run.
+external_object_storage_configured,0,boolean,recorded_boundary,S3-compatible framework implemented but not configured against a production bucket.
+external_image_fallback_configured,0,boolean,recorded_boundary,Provider architecture supports fallback; no external image-generation provider configured at this checkpoint.
+formal_image_quality_benchmark_completed,0,boolean,recorded_boundary,Image-generation benchmark suite remains pending.
+brain_api_modified,0,boolean,recorded,Source explicitly states no brain_api.py changes were required.

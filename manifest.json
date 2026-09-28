@@ -3,7 +3,7 @@
   "project": "KESPA AI",
   "publisher": "NexLabs Studios",
   "repository": "https://github.com/ryanmurray89/KespaAI-Research",
-  "updated_at": "2026-09-24T11:41:44Z",
+  "updated_at": "2026-09-28T13:57:19Z",
   "entries": [
     {
       "id": "KESPA-EXP-001",
@@ -1828,6 +1828,51 @@
         "scheduled-research",
         "knowledge-lifecycle",
         "auditability"
+      ],
+      "files": [
+        {
+          "name": "README.md",
+          "type": "markdown",
+          "primary": true
+        },
+        {
+          "name": "note.json",
+          "type": "json"
+        },
+        {
+          "name": "metrics.csv",
+          "type": "csv"
+        },
+        {
+          "name": "methodology.md",
+          "type": "markdown"
+        },
+        {
+          "name": "provenance.json",
+          "type": "json"
+        },
+        {
+          "name": "SHA256SUMS.txt",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "KESPA-NOTE-030",
+      "type": "technical_note",
+      "title": "Private-Safe Image Editing and Deterministic Transformation Routing",
+      "date": "2026-09-28",
+      "status": "published",
+      "summary": "KESPA v7.0 introduced a first-class privacy-aware image_edit path after private routing correctly failed closed when no eligible provider could receive the source image. The implementation authorized the local image bridge, added deterministic transparent-background processing, provider fallback strategies, stronger edit lineage/provenance, and safer error handling while keeping control in Admin/brain_config/provider routing and requiring no Brain runtime modification. Production validation remained pending.",
+      "path": "technical-notes/KESPA-NOTE-030",
+      "tags": [
+        "image-editing",
+        "private-data-routing",
+        "deterministic-transform",
+        "provider-routing",
+        "provenance",
+        "error-handling",
+        "local-first"
       ],
       "files": [
         {

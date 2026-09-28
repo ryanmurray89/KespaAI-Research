@@ -1,0 +1,14 @@
+metric,value,unit,status,source_type,notes
+release_start,v7.0,version,recorded,direct,Session release range begins at v7.0.
+release_final,v7.3,version,recorded,direct,Final session iteration.
+image_edit_implementation_iteration,v7.0,version,recorded,direct,Source identifies the image-edit work as completed in v7.0.
+first_class_image_edit_capability,True,boolean,recorded,direct,A real image_edit capability was added.
+private_route_failure_observed,image_edit_private_route_unavailable,state,recorded,direct,Fail-closed condition that motivated the routing work.
+local_image_bridge_authorized_for_private_editing,True,boolean,recorded,direct,KESPA Local Image Bridge was explicitly trusted for the private image-edit path.
+deterministic_transparent_background_transform,True,boolean,recorded,direct,Deterministic transparent-background processing was added.
+provider_fallback_strategies_added,True,boolean,recorded,direct,Fallback strategies were added; the source does not provide a fully validated production matrix.
+lineage_provenance_improved,True,boolean,recorded,direct,Image-edit lineage/provenance was improved.
+raw_internal_error_exposure_prevented,True,boolean,recorded,direct,Raw internal errors are prevented from leaking directly to users.
+brain_runtime_modified,False,boolean,recorded,direct,No Brain runtime modification was required for this work.
+production_validation_complete,False,boolean,boundary,direct,Issue status is Implemented / Pending Production Validation.
+image_edit_quality_benchmark_available,False,boolean,boundary,direct,No image-edit quality benchmark is supplied in the source.

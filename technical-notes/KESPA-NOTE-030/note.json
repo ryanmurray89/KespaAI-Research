@@ -1,0 +1,38 @@
+{
+  "id": "KESPA-NOTE-030",
+  "type": "technical_note",
+  "title": "Private-Safe Image Editing and Deterministic Transformation Routing",
+  "date": "2026-09-28",
+  "status": "published",
+  "summary": "KESPA v7.0 introduced a first-class privacy-aware image_edit capability after the system correctly failed closed when no provider was authorized to receive private image data. The implementation explicitly authorized the local image bridge, added deterministic transparent-background processing, provider fallback strategies, stronger edit lineage/provenance, and safer user-facing error handling, all through the Admin/brain_config/provider-routing control plane without requiring a Brain runtime modification. Production validation remained pending in the supplied source.",
+  "release_range": "v7.0-v7.3",
+  "final_iteration": "v7.3",
+  "image_edit_iteration": "v7.0",
+  "control_plane": [
+    "Admin",
+    "brain_config",
+    "provider routing database"
+  ],
+  "brain_runtime_modified": false,
+  "implementation_state": "Implemented / Pending Production Validation",
+  "observed_fail_closed_error": "image_edit_private_route_unavailable",
+  "capabilities": {
+    "first_class_image_edit": true,
+    "private_route_eligibility": true,
+    "local_image_bridge_authorized": true,
+    "deterministic_transparent_background": true,
+    "provider_fallback_strategies": true,
+    "lineage_provenance_improved": true,
+    "raw_internal_error_leak_prevention": true
+  },
+  "production_validation_complete": false,
+  "tags": [
+    "image-editing",
+    "private-data-routing",
+    "deterministic-transform",
+    "provider-routing",
+    "provenance",
+    "error-handling",
+    "local-first"
+  ]
+}

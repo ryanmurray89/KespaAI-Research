@@ -1,0 +1,47 @@
+{
+  "schema": "kespa.public_research_provenance.v1",
+  "release_id": "KESPA-NOTE-030",
+  "source_material": [
+    {
+      "kind": "engineering_update",
+      "description": "KESPA v7.0-v7.3 feature/Jira summary supplied by the project owner on 2026-09-28."
+    }
+  ],
+  "directly_recorded_facts": [
+    "The session release range was v7.0 through v7.3, with v7.3 the final iteration.",
+    "The image work was completed in v7.0.",
+    "A private image-edit request could fail with image_edit_private_route_unavailable when no provider was authorized to receive private image data.",
+    "A first-class image_edit capability was added.",
+    "The KESPA Local Image Bridge was explicitly trusted for the image-edit path.",
+    "Deterministic transparent-background processing was added.",
+    "Provider fallback strategies were added.",
+    "Private image-data protections were preserved.",
+    "Image-edit lineage/provenance was improved.",
+    "Raw internal errors were prevented from leaking to users.",
+    "The control plane remained Admin / brain_config / provider routing database.",
+    "No Brain runtime modification was required for this work.",
+    "The issue status was Implemented / Pending Production Validation."
+  ],
+  "derived_values": [],
+  "validation_boundary": [
+    "Production validation remained pending in the supplied source.",
+    "No image-edit quality, segmentation quality, latency, throughput, or reliability benchmark was supplied.",
+    "No complete production-tested provider-fallback matrix was supplied.",
+    "The source does not establish that every external provider is eligible to receive private image data.",
+    "Deterministic transparent-background processing is one transformation path and is not evidence of general deterministic image editing."
+  ],
+  "deduplication": {
+    "related_prior_records": [
+      "KESPA-NOTE-028"
+    ],
+    "distinct_scope": "KESPA-NOTE-028 covers generation of new images and generated-image retention/storage. This release covers editing an existing/private image, private-data route eligibility, deterministic transformation handling, fallback, edit lineage/provenance, and safe error behavior."
+  },
+  "publication_exclusions": [
+    "private source images",
+    "private user or organization data",
+    "credentials, API keys, bearer tokens, cookies, or sessions",
+    "raw internal error bodies and stack traces",
+    "undocumented provider-routing implementation details",
+    "unsupported claims of production validation or image-edit quality"
+  ]
+}
